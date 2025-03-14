@@ -11,7 +11,8 @@
     amodifier:=2/sens
     modifierz:=1.9/sens
 
-    F2::
+    F2::toggle := !toggle
+if (!toggle)
     return
     *~$X::
     DllCall("mouse_event", "UInt", 0x01, "UInt", 223*modifiers, "UInt", 0)
